@@ -5,10 +5,10 @@ on:
     branches: ["main"]
 
 jobs:
-      deploy-codigofacilito:
-        runs-on: ubuntu-latest
-        steps:
-          - run: echo "Hacemos pull del código"
-          - run: echo "Correr migraciones"
-          - run: echo "Generar binario"
-          - run: echo "publicar versión"
+  deploy-codigofacilito:
+    runs-on: ubuntu-latest
+      steps:
+        - run: echo "Hacemos pull del código"
+        - run: echo "Correr migraciones"
+        - run: echo "Generar binario"
+        - run: echo "publicar versión"
