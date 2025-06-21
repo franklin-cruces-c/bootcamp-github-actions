@@ -12,3 +12,5 @@ jobs:
       - run: echo "Correr migraciones"
       - run: echo "Generar binario"
       - run: echo "publicar versión"
+      - run: pwd
+      - run: ls
