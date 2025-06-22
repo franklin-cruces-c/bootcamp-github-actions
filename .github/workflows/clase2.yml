@@ -19,3 +19,5 @@ jobs:
     steps:
       - name: Paso 2
         run: echo "Ejecutando paso 2 ..."
+      - name: Imprimiendo contexto
+        run: echo "${{github.ref}}"
