@@ -42,4 +42,4 @@ jobs:
       - run: java -version #java HelloWorldApp.java
       - run: javac HolaMundo.java
       - run: java HolaMundo
-      - run: echo "$SALIDA_FIRSTJOB"
+      - run: echo "SALIDA FIRSTJOB $SALIDA_FIRSTJOB"
