@@ -59,3 +59,12 @@ jobs:
           name: archivo-test
       - name: Cat file
         run: cat test.log
+  estrategia_job:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        message: ["Hola", "CodigoFacilito", "Bootcamp Github Action"]
+    steps:
+      - name: Print mensaje
+        run: echo "${{matrix.message}}"
+  
