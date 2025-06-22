@@ -16,4 +16,4 @@ jobs:
 
     steps:
       - name: Paso 2
-        run: "Ejecutando paso 2 ..."
+        run: echo "Ejecutando paso 2 ..."
