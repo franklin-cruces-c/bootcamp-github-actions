@@ -11,3 +11,9 @@ jobs:
     steps:
       - name: Hola Mundo
         run: echo "Hola Mundo clase 2."
+  second_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Paso 2
+        run: "Ejecutando paso 2 ..."
