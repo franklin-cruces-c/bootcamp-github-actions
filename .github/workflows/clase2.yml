@@ -18,7 +18,7 @@ jobs:
 
       - name: Imprime variable de entorno
         run: echo "$CodigoFacilitoHome"
-      - run: echo "mi variable paso1: ${{steps.step_1.outputs.mi_variable}}"
+      - run: echo "mi variable paso1  ${{steps.step_1.outputs.mi_variable}}"
   second_job:
     if: ${{github.ref == 'refs/heads/main'}}
     needs: first_jobs
