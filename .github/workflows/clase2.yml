@@ -5,9 +5,11 @@ on: push
 
 
 jobs:
-  first_jobs:
+  first_job:
     runs-on: ubuntu-latest
     
+    outputs:
+      salida: ${{steps.step_1.outputs.mi_variable}}
     env:
       CodigoFacilitoHome: "/usr/local"
     steps:
@@ -21,9 +23,11 @@ jobs:
       - run: echo "mi variable paso1  ${{steps.step_1.outputs.mi_variable}}"
   second_job:
     if: ${{github.ref == 'refs/heads/main'}}
-    needs: first_jobs
+    needs: first_job
     runs-on: ubuntu-latest
-
+    
+    env:
+      SALIDA_FIRSTJOB: ${{needs.first_job.outputs.salida}}
     steps:
       - name: Paso 2
         run: echo "Ejecutando paso 2 ..."
@@ -38,3 +42,4 @@ jobs:
       - run: java -version #java HelloWorldApp.java
       - run: javac HolaMundo.java
       - run: java HolaMundo
+      - run: echo "$SALIDA_FIRSTJOB"
