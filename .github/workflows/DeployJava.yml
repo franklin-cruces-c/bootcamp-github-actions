@@ -8,5 +8,5 @@ jobs:
   first_job:
     runs-on: ubuntu-latest
     steps:
-        -name: Print variable
-         run: echo "${{secrets.PASSWORD}}"
+      - name: Print variable 
+        run: echo "$secrets.PASSWORD"
